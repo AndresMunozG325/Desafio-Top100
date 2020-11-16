@@ -32,3 +32,9 @@ FROM movies
 INNER JOIN reparto   
 ON movies.id = reparto.id_r AND movies.id = 2;
 
+-- 5. Listar los titulos de las películas donde actúe Harrison Ford.(0.5 puntos)
+
+SELECT movies.pelicula, reparto.actor  
+FROM movies   
+INNER JOIN reparto   
+ON movies.id = reparto.id_r AND reparto.actor = 'Harrison Ford';
