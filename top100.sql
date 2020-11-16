@@ -15,14 +15,14 @@ CREATE TABLE movies(
 CREATE TABLE reparto( 
      id_r INT, 
      actor VARCHAR(255), 
-     FOREIGN KEY (id_r) REFERENCES mpvies(id) );
+     FOREIGN KEY (id_r) REFERENCES movies(id)
 );
 
 -- 3. Cargar ambos archivos a su tabla correspondiente (1 punto)
  
-\copy movies FROM '/Users/andresmunozg./Desktop/base-de-datos/clase2/peliculas.csv' csv [header];
+\copy movies FROM '/Users/andresmunozg./Desktop/base-de-datos/clase2/peliculas.csv' csv HEADER;
 
-\copy reparto FROM '/Users/andresmunozg./Desktop/base-de-datos/clase2/reparto.csv' csv [header];
+\copy reparto FROM '/Users/andresmunozg./Desktop/base-de-datos/clase2/reparto.csv' csv HEADER;
 
 -- 4. Listar todos los actores que aparecen en la película "Titanic", indicando el título de la película,
 -- año de estreno, director y todo el reparto. (0.5 puntos)
@@ -30,5 +30,5 @@ CREATE TABLE reparto(
 SELECT movies.pelicula, movies.ano_estreno, movies.director, reparto.actor  
 FROM movies   
 INNER JOIN reparto   
-ON movies.id = reparto.id_r;
+ON movies.id = reparto.id_r AND movies.id = 2;
 
