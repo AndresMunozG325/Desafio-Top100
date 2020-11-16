@@ -42,11 +42,14 @@ ON movies.id = reparto.id_r AND reparto.actor = 'Harrison Ford';
 -- 6. Listar los 10 directores mas populares, indicando su nombre y cuántas películas aparecen en el
 -- top 100.(1 puntos)
 
-SELECT director, COUNT (director) AS cantidad
+SELECT director, COUNT (director) AS cantidad_peliculas
 FROM movies
 GROUP BY director
 ORDER BY cantidad DESC
 LIMIT 10;
 
 -- 7. Indicar cuantos actores distintos hay (1 puntos)
+
+SELECT COUNT(DISTINCT actor) AS cantidad_de_actores_unicos
+FROM reparto;
 
