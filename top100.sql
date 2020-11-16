@@ -38,3 +38,12 @@ SELECT movies.pelicula, reparto.actor
 FROM movies   
 INNER JOIN reparto   
 ON movies.id = reparto.id_r AND reparto.actor = 'Harrison Ford';
+
+-- 6. Listar los 10 directores mas populares, indicando su nombre y cuántas películas aparecen en el
+-- top 100.(1 puntos)
+
+SELECT director, COUNT (director) AS cantidad
+FROM movies
+GROUP BY director
+ORDER BY cantidad DESC
+LIMIT 10;
