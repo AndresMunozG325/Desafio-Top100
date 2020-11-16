@@ -47,3 +47,6 @@ FROM movies
 GROUP BY director
 ORDER BY cantidad DESC
 LIMIT 10;
+
+-- 7. Indicar cuantos actores distintos hay (1 puntos)
+
