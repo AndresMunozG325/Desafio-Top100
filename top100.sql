@@ -13,5 +13,5 @@ CREATE TABLE movies(
 CREATE TABLE reparto( 
      id_r INT, 
      actor VARCHAR(255), 
-     PRIMARY KEY (id_r)
+     FOREIGN KEY (id_r)
 );
