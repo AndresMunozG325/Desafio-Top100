@@ -55,3 +55,8 @@ FROM reparto;
 
 -- 8. Indicar las películas estrenadas entre los años 1990 y 1999 (ambos incluidos) ordenadas por
 -- título de manera ascendente.(1 punto)
+
+SELECT pelicula, ano_estreno 
+FROM movies
+WHERE ano_estreno BETWEEN 1990 AND 1999
+ORDER BY pelicula DESC;
