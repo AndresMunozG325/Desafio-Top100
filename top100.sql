@@ -53,3 +53,5 @@ LIMIT 10;
 SELECT COUNT(DISTINCT actor) AS cantidad_de_actores_unicos
 FROM reparto;
 
+-- 8. Indicar las películas estrenadas entre los años 1990 y 1999 (ambos incluidos) ordenadas por
+-- título de manera ascendente.(1 punto)
