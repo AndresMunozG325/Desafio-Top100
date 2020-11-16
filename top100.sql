@@ -60,3 +60,10 @@ SELECT pelicula, ano_estreno
 FROM movies
 WHERE ano_estreno BETWEEN 1990 AND 1999
 ORDER BY pelicula DESC;
+
+-- 9. Listar el reparto de las películas lanzadas el año 2001 (1 punto)
+
+SELECT movies.pelicula, movies.ano_estreno, reparto.actor  
+FROM movies   
+INNER JOIN reparto   
+ON movies.id = reparto.id_r AND movies.ano_estreno = 2001;
