@@ -67,3 +67,14 @@ SELECT movies.pelicula, movies.ano_estreno, reparto.actor
 FROM movies   
 INNER JOIN reparto   
 ON movies.id = reparto.id_r AND movies.ano_estreno = 2001;
+
+-- 10. Listar los actores de la película más nueva (1 punto)
+
+SELECT movies.pelicula, movies.ano_estreno, reparto.actor  
+FROM movies   
+INNER JOIN reparto   
+ON movies.id = reparto.id_r 
+ORDER BY movies.ano_estreno DESC
+LIMIT 22;
+
+-- TERMINADOS
